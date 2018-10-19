@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGrey"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/yellow" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="220dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/templates_list"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="horizontal"
+            android:background="@color/grey"
+            tools:listitem="@layout/template" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:text="Templates" />
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_gravity="center"
+        android:id="@+id/pages_list"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkGrey"
+        tools:listitem="@layout/item" />
+
+</LinearLayout>

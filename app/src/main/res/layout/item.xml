@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:background="@color/grey">
+
+
+    <ImageView
+        android:id="@+id/preview"
+        android:layout_width="140dp"
+        android:layout_height="140dp" />
+
+    <ImageView
+        android:id="@+id/tmp_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/grey"
+        android:layout_below="@+id/date"
+        android:layout_toEndOf="@id/preview" />
+
+
+    <TextView
+        android:id="@+id/nameTitle"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/preview"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:text="Title:" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/preview"
+        android:layout_below="@+id/nameTitle"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:text="Pagename" />
+
+    <TextView
+        android:id="@+id/dateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/preview"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/yellow"
+        android:textSize="15sp"
+        android:text="Created:" />
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_toEndOf="@+id/dateTitle"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        tools:text="date" />
+
+    <Button
+        android:id="@+id/more_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_more_vert_24dp" />
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:layout_below="@id/preview"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/lineTop"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:background="@color/colorPrimary" />-->
+
+</RelativeLayout>
