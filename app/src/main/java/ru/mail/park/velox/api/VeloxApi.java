@@ -18,19 +18,13 @@ public interface VeloxApi {
     String BASE_URL = "https://velox-server.herokuapp.com";
 
     @GET("/qr/{id}")
-    Call<Page> getPost(@Path("id") String uuid);
-
-    @POST("/qr/{id}/create")
-    Call<Page> createPost(Page page);
-
-    @POST("/qr/{id}/edit")
-    Call<Message> editPost(@Path("id") String uuid);
+    Call<Page> getPage(@Path("id") String uuid);
 
     @DELETE("/qr/{id}/delete")
-    Call<Message> deletePost(@Path("id") String uuid);
+    Call<Message> deletePage(@Path("id") String uuid);
 
     @GET("/")
-    Call<List<Page>> getPosts(@Query("sort") String sort, @Query("own") String own);
+    Call<List<Page>> getPages(@Query("sort") String sort, @Query("own") String own);
 
     @GET("/getuser")
     Call<Message> getUser();

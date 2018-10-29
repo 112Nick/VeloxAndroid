@@ -1,7 +1,12 @@
 package ru.mail.park.velox.ui;
 
+import android.Manifest;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,15 +24,12 @@ import ru.mail.park.velox.recycler.PagesRecyclerAdapter;
 import ru.mail.park.velox.recycler.TemplatesRecyclerAdapter;
 import ru.mail.park.velox.utils.AppComponent;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements PageDetailedFragment.Delegate{
 
 
     private RecyclerView pagesRecyclerView;
     private PagesRecyclerAdapter pagesAdapter;
 
-
-    private RecyclerView templatesRecyclerView;
-    private TemplatesRecyclerAdapter templatesAdapter;
 
 
     @Override
@@ -35,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final AppComponent appComponent = AppComponent.getInstance();
-
         Callback<List<Page>> callback1 = new Callback<List<Page>>() {
             @Override
             public void onResponse(@NonNull Call<List<Page>> call, @NonNull Response<List<Page>> response) {
@@ -54,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("PAGES", "OnFailure");
             }
         };
-        appComponent.veloxApi.getPosts("a-z", "all").enqueue(callback1);
+        appComponent.veloxApi.getPages("a-z", "all").enqueue(callback1);
 
 
-        pagesAdapter = new PagesRecyclerAdapter(this);
+        pagesAdapter = new PagesRecyclerAdapter(this, this::onItemClick);
 
         pagesRecyclerView = findViewById(R.id.pages_list);
 //        pagesRecyclerView.setLayoutManager(new GridLayoutManager(this, 3));
@@ -67,13 +68,6 @@ public class MainActivity extends AppCompatActivity {
         pagesRecyclerView.setHasFixedSize(true);
 
 
-        templatesAdapter = new TemplatesRecyclerAdapter(this);
-
-        templatesRecyclerView = findViewById(R.id.templates_list);
-        templatesRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        templatesRecyclerView.setAdapter(templatesAdapter);
-        templatesRecyclerView.setHasFixedSize(true);
-
 
         Template location = new Template("ylocation");
         Template event = new Template("event");
@@ -82,13 +76,28 @@ public class MainActivity extends AppCompatActivity {
         Template wifi = new Template("wifi");
         Template add = new Template("default");
 
-        templatesAdapter.add(location);
-        templatesAdapter.add(event);
-        templatesAdapter.add(phone);
-        templatesAdapter.add(sms);
-        templatesAdapter.add(wifi);
-        templatesAdapter.add(add);
 
+    }
 
+    private void onItemClick(Page page) {
+
+//        PageDetailedFragment pageDetailedFragment = PageDetailedFragment.newInstance(page);
+//        pageDetailedFragment.show(getFragmentManager(),"123");
+
+//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//        Fragment prev = getSupportFragmentManager().findFragmentByTag("dialog");
+//        if (prev != null) {
+//            ft.remove(prev);
+//        }
+//        ft.addToBackStack(null);
+
+        // Create and show the dialog.
+        DialogFragment newFragment = PageDetailedFragment.newInstance(page);
+        newFragment.show(getSupportFragmentManager(), "dialog");
+    }
+
+    @Override
+    public void onDelete(Page item) {
+        pagesAdapter.remove(item);
     }
 }

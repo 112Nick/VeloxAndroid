@@ -4,43 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="220dp"
-                app:layout_collapseMode="parallax">
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/templates_list"
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:background="@color/grey"
-                    android:orientation="horizontal"
-                    tools:listitem="@layout/template" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    android:text="Templates"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-
-            </FrameLayout>
-
-        </android.support.design.widget.CollapsingToolbarLayout>
-
-    </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/pages_list"

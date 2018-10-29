@@ -2,10 +2,12 @@ package ru.mail.park.velox.recycler;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,9 +16,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.mail.park.velox.OnItemClickListener;
 import ru.mail.park.velox.R;
 import ru.mail.park.velox.model.InitItem;
 import ru.mail.park.velox.model.Page;
+import ru.mail.park.velox.ui.PageDetailedFragment;
 import ru.mail.park.velox.utils.AppComponent;
 
 public class PagesRecyclerAdapter extends RecyclerView.Adapter<PagesRecyclerAdapter.PagesRecyclerViewHolder> {
@@ -24,9 +28,13 @@ public class PagesRecyclerAdapter extends RecyclerView.Adapter<PagesRecyclerAdap
     private final LayoutInflater layoutInflater;
     private final List<Page> data;
 
-    public PagesRecyclerAdapter(Context context) {
+    private final OnItemClickListener<Page> onItemClickListener;
+
+
+    public PagesRecyclerAdapter(Context context, OnItemClickListener<Page> onItemClickListener) {
         layoutInflater = LayoutInflater.from(context);
         this.data = new ArrayList<>();
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
@@ -37,7 +45,7 @@ public class PagesRecyclerAdapter extends RecyclerView.Adapter<PagesRecyclerAdap
 
     @Override
     public void onBindViewHolder(PagesRecyclerViewHolder holder, int position) {
-        holder.bind(data.get(position));
+        holder.bind(data.get(position), this.onItemClickListener);
     }
 
     @Override
@@ -75,7 +83,7 @@ public class PagesRecyclerAdapter extends RecyclerView.Adapter<PagesRecyclerAdap
 
         }
 
-        void bind(Page page) {
+        void bind(final Page page, OnItemClickListener onItemClickListener) {
             InitItem initItem = initItem(page);
             tmpIcon.setImageResource(initItem.tmpIconSource);
             preview.setImageBitmap(AppComponent.generateQR(initItem.stringToCode));
@@ -85,6 +93,10 @@ public class PagesRecyclerAdapter extends RecyclerView.Adapter<PagesRecyclerAdap
                 pageName.setText(page.getTitle());
             }
             date.setText(page.getDate().substring(0, 10));
+
+
+            itemView.setOnClickListener(v -> onItemClickListener.onItemClick(page));
+
 
         }
 
