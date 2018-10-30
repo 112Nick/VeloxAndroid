@@ -172,7 +172,6 @@ public class Page implements Parcelable {
         this.innerPages = innerPages;
     }
 
-
     @Override
     public int describeContents() {
         return 0;
@@ -191,5 +190,25 @@ public class Page implements Parcelable {
         dest.writeByte((byte) (isMine == null ? 0 : isMine ? 1 : 2));
         dest.writeByte((byte) (isStatic == null ? 0 : isStatic ? 1 : 2));
     }
+
+
+//    @Override
+//    public int describeContents() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public void writeToParcel(Parcel dest, int flags) {
+//        dest.writeString(uuid);
+//        dest.writeString(title);
+//        dest.writeString(template);
+//        dest.writeStringList(fieldsNames);
+//        dest.writeStringList(fieldsValues);
+//        dest.writeArray(innerPages);
+//        dest.writeString(date);
+//        dest.writeByte((byte) (isPublic == null ? 0 : isPublic ? 1 : 2));
+//        dest.writeByte((byte) (isMine == null ? 0 : isMine ? 1 : 2));
+//        dest.writeByte((byte) (isStatic == null ? 0 : isStatic ? 1 : 2));
+//    }
 
 }

@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:textColor="@color/yellow"
-        android:textAlignment="center"
         android:textSize="20sp"
         tools:text="Title13123as" />
 
@@ -24,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/field_name"
         android:textColor="@color/white"
-        android:textAlignment="center"
         android:textSize="20sp"
         tools:text="Title13123as" />
 

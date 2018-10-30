@@ -24,39 +24,29 @@
         android:layout_centerHorizontal="true"/>
 
     <Button
-        android:id="@+id/open_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginRight="15dp"
-        android:layout_alignStart="@+id/preview"
-        android:layout_below="@+id/preview"
-        android:background="@drawable/ic_crop_original_black_24dp"/>
-
-    <Button
         android:id="@+id/download_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginRight="15dp"
+        android:layout_alignStart="@+id/preview"
         android:layout_below="@id/preview"
-        android:layout_toEndOf="@id/open_btn"
         android:background="@drawable/ic_file_download_black_24dp"/>
 
     <Button
         android:id="@+id/share_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginRight="15dp"
-        android:layout_below="@id/preview"
-        android:layout_toEndOf = "@id/download_btn"
-        android:background="@drawable/ic_share_black_24dp"/>
+        android:layout_below="@+id/preview"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_share_black_24dp" />
 
     <Button
         android:id="@+id/delete_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_below="@id/preview"
-        android:layout_toEndOf="@+id/share_btn"
-        android:background="@drawable/ic_delete_black_24dp"/>
+        android:layout_alignEnd="@+id/preview"
+        android:layout_below="@+id/preview"
+        android:background="@drawable/ic_delete_black_24dp" />
 
 
 

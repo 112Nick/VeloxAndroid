@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/grey"
     android:orientation="vertical">
 
+
     <TextView
         android:id="@+id/title_page"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="25dp"
-        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:textAlignment="center"
@@ -22,13 +24,39 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/menu_container"
         android:layout_width="280dp"
-        android:layout_height="280dp"
-        android:layout_gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title_page"
+        android:orientation="vertical"/>
 
 
-    </android.support.v7.widget.RecyclerView>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background = "@drawable/progress" />
+
+    <ImageView
+        android:id="@+id/error_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/yellow"
+        android:background="@drawable/ic_error_outline_24dp" />
+
+    <TextView
+        android:id="@+id/error_status"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/error_icon"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textSize="25dp"
+        tools:text="Error"/>
 
 
-
-</LinearLayout>
+</RelativeLayout>
