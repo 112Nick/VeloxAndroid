@@ -1,9 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="280dp"
+    android:layout_width="match_parent"
     android:layout_margin="10dp"
-    android:layout_height="50dp"
-    android:background="@color/yellow">
+    android:layout_height="150dp"
+    android:padding="10dp"
+    android:background="@color/snow">
 
 
 
@@ -12,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textColor="@color/darkGrey"
+        android:padding="5dp"
+        android:textColor="@color/peach"
         android:textAlignment="center"
         android:textSize="20sp"
         tools:text="Title13123as" />

@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -83,6 +84,7 @@ public class MenuRecyclerAdapter extends RecyclerView.Adapter<MenuRecyclerAdapte
 
         void bind(final Page page, OnItemClickListener onItemClickListener, Boolean isContainer) {
             if (isContainer) {
+
                 pageName.setText(page.getTitle());
             } else {
                 fieldName.setText(page.getFieldsNames().get(0));
