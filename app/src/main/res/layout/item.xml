@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_margin="10dp"
     android:layout_height="wrap_content"
-    android:background="@color/grey">
+    android:background="@color/snow">
 
 
     <ImageView
@@ -17,7 +17,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
-        android:background="@color/grey"
+        android:background="@color/snow"
         android:layout_below="@+id/date"
         android:layout_toEndOf="@id/preview" />
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/preview"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/yellow"
+        android:textColor="@color/peach"
         android:textSize="20sp"
         android:text="Title:" />
 
@@ -39,7 +39,7 @@
         android:layout_toEndOf="@+id/preview"
         android:layout_below="@+id/nameTitle"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/white"
+        android:textColor="@color/darkGrey"
         android:textSize="20sp"
         tools:text="Pagename" />
 
@@ -51,7 +51,7 @@
         android:layout_below="@+id/name"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/yellow"
+        android:textColor="@color/peach"
         android:textSize="15sp"
         android:text="Created:" />
 
@@ -64,7 +64,7 @@
         android:layout_toEndOf="@+id/dateTitle"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/white"
+        android:textColor="@color/grey"
         android:textSize="15sp"
         tools:text="date" />
 

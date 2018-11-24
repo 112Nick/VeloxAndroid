@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/grey"
+    android:background="@color/prim"
     android:orientation="vertical">
 
 
@@ -16,7 +16,7 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:textAlignment="center"
-        android:textColor="@color/yellow"
+        android:textColor="@color/peach"
         android:textSize="35dp"
         tools:text="Title"/>
 
@@ -42,7 +42,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
-        android:textColor="@color/yellow"
+        android:textColor="@color/peach"
         android:background="@drawable/ic_error_outline_24dp" />
 
     <TextView
@@ -54,7 +54,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textColor="@color/yellow"
+        android:textColor="@color/peach"
         android:textSize="25dp"
         tools:text="Error"/>
 

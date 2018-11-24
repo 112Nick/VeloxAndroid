@@ -9,4 +9,11 @@
     <color name="yellow">#ffd900</color>
     <color name="white">#ffffff</color>
 
+    <color name="snow">#fcfbfd</color>
+    <color name="peach">#f08177</color>
+    <color name="lightpeach">#fb8f74</color>
+    <color name="prim">#dadada</color>
+
+
+
 </resources>

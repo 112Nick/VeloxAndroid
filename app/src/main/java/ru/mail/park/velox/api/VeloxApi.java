@@ -15,7 +15,7 @@ import ru.mail.park.velox.model.Token;
 
 public interface VeloxApi {
 
-    String BASE_URL = "https://velox-server.herokuapp.com";
+    String BASE_URL = "https://velox-server-usa.herokuapp.com";
 
     @GET("/qr/{id}")
     Call<Page> getPage(@Path("id") String uuid);

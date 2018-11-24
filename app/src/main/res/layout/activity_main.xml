@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="@color/darkGrey"
+            android:background="@color/prim"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:listitem="@layout/item" />
 
@@ -29,7 +29,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
-        android:textColor="@color/yellow"
+        android:textColor="@color/peach"
         android:background="@drawable/ic_error_outline_24dp" />
 
     <TextView
@@ -41,7 +41,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textColor="@color/yellow"
+        android:textColor="@color/peach"
         android:textSize="25dp"
         tools:text="Error"/>
 
