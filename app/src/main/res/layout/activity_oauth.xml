@@ -8,7 +8,7 @@
 
 
     <FrameLayout
-        android:layout_height="200dp"
+        android:layout_height="230dp"
         android:layout_width="match_parent"
         android:background="@drawable/background">
 
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/snow"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="130dp"
             android:text="We provide solutions that make your life better!"
             android:textSize="16sp"/>
 
@@ -53,7 +53,7 @@
                 android:id="@+id/qr_handy_ic"
                 android:layout_height="70dp"
                 android:layout_width="70dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="15dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/our_features"
                 android:background="@drawable/ic_qr_code_handy"/>
@@ -62,7 +62,7 @@
                 android:id="@+id/customize_menu_ic"
                 android:layout_height="70dp"
                 android:layout_width="70dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="15dp"
                 android:layout_below="@+id/our_features"
                 android:layout_toEndOf="@+id/qr_handy_ic"
                 android:background="@drawable/ic_menu_customize"/>
@@ -71,7 +71,7 @@
                 android:id="@+id/protect_ic"
                 android:layout_height="70dp"
                 android:layout_width="70dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="15dp"
                 android:layout_below="@+id/our_features"
                 android:layout_toStartOf="@+id/updated_stack"
 
@@ -81,7 +81,7 @@
                 android:id="@+id/updated_stack"
                 android:layout_height="70dp"
                 android:layout_width="70dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="15dp"
                 android:layout_below="@+id/our_features"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/ic_stack_updated"/>
@@ -92,7 +92,7 @@
                 android:id="@+id/qr_handy_text"
                 android:layout_height="wrap_content"
                 android:layout_width="70dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="15dp"
                 android:layout_below="@+id/protect_ic"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="10dp"
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="70dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="15dp"
                 android:textColor="@color/darkGrey"
                 android:layout_below="@+id/protect_ic"
                 android:layout_toEndOf="@id/qr_handy_text"
@@ -121,7 +121,7 @@
                 android:layout_marginTop="10dp"
                 android:textColor="@color/darkGrey"
                 android:layout_below="@+id/protect_ic"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="15dp"
                 android:layout_toStartOf="@+id/updated_stack_text"
                 android:textAlignment="center"
                 android:textSize="14sp"
@@ -135,7 +135,7 @@
                 android:textColor="@color/darkGrey"
                 android:layout_below="@+id/protect_ic"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="15dp"
                 android:textAlignment="center"
                 android:textSize="14sp"
                 android:text="Up-to-date Tech stack"/>
@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_centerHorizontal="true"
-            android:layout_above="@+id/yandex_btn"
+            android:layout_below="@+id/qr_handy_text"
             android:layout_marginTop="15dp"
             android:text="Try it out"
             android:textColor="@color/grey"
@@ -165,8 +165,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="30dp"
+            android:layout_below="@id/try_it_out"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/gradient"
             android:textColor="@color/snow"
             android:text="Yandex" />
@@ -176,9 +176,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="10dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@id/try_it_out"
+
             android:layout_marginLeft="20dp"
             android:background="@drawable/gradient"
             android:textColor="@color/snow"
@@ -189,8 +190,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="30dp"
+            android:layout_below="@id/try_it_out"
+
+            android:layout_marginBottom="10dp"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="20dp"
             android:background="@drawable/gradient"
